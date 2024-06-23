@@ -2,20 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   
-
-
+}
 
 #menu {
+    position: fixed; /* Fixní pozice */
+    top: 0; /* Umístěno nahoře */
+    left: 0; /* Umístěno vlevo */
     border: 2px solid black;
     width: 15%;
     background-color: #333;
-    height: 2000px;
-    float: inline-start;
+    height: 100vh; /* Výška odpovídá výšce okna prohlížeče */
+    overflow-y: auto; /* Povolit vertikální posuvník, pokud obsah přesáhne výšku okna */
 }
 
 #menu nav ul {
-    margin-top: 130%;
+    margin-top: 130%; /* Můžete upravit podle potřeby */
+    padding: 10px; /* Přidání odsazení */
 }
 
 #menu nav ul li {
@@ -23,10 +25,20 @@
     text-align: center;
 }
 
-
-
-#menu nav ul li a{
+#menu nav ul li a {
     color: aliceblue;
     text-decoration: none;
     font-size: 20px;
+    position: relative;
+    transition: color 0.1s ease-in-out;
+}
+
+#menu nav ul li a:hover {
+    transition: color 0.18s ease-in-out;
+    color: darkgray;
+}
+
+/* Styl pro aktivní (kliknutý) odkaz */
+#menu nav ul li a.active {
+    color: #32CD32; /* nebo jiná barva podle vašeho výběru */
 }
