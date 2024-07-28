@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+}
+
+#menu {
+    position: fixed; /* Fixní pozice */
+    top: 0; /* Umístěno nahoře */
+    left: 0; /* Umístěno vlevo */
+    border: 2px solid black;
+    width: 15%;
+    background-color: #333;
+    height: 100vh; /* Výška odpovídá výšce okna prohlížeče */
+    overflow-y: auto; /* Povolit vertikální posuvník, pokud obsah přesáhne výšku okna */
+}
+
+
+
+#menu nav ul {
+    margin-top: 130%; /* Můžete upravit podle potřeby */
+    padding: 10px; /* Přidání odsazení */
+}
+
+#menu nav ul li {
+    margin-top: 3%;
+    text-align: center;
+}
+
+#menu nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    transition: color 0.1s ease-in-out;
+}
+
+#menu nav ul li a:hover {
+    transition: color 0.18s ease-in-out;
+    color: darkgray;
+}
+
+/* Styl pro aktivní (kliknutý) odkaz */
+#menu nav ul li a.active {
+    color: #32CD32; /* nebo jiná barva podle vašeho výběru */
+}
+
+#obsah {
+    background-image: url(trava.jpg);
+    background-repeat: no-repeat;
+    margin-left: 15%; /* Odstranění posunu, aby obsah začínal hned vedle menu */
+    padding: 20px;
+    width: 85%; /* Šířka obsahu, aby se vešel vedle menu */
+    text-align: center; /* Zarovnání textu na střed */
+}
+
+#obal {
+    margin-left: 5%;
+    width: 70%;
+    /*background-color: darkgray;
+    opacity: 0.9; */
+}
+
+.sluzba {
+    margin-top: 4%;
+    margin-left: 3%;
+    margin-right: 10%;
+   /* background-color: dimgrey;    */
+}
+
+.odkazSluzby {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.odkazPopisu {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Přidané CSS pro obrázkovou slideshow s plynulým prolnutím */
+.slideshow-container {
+    position: relative;
+    max-width: 1800px; /* Můžeš upravit podle potřeby */
+    margin: auto;
+}
+
+#obsah img {
+    width: 100%;
+   /* max-width: 2000px; /* Můžeš upravit podle potřeby */
+    transition: opacity 1s ease-in-out;
+    border-radius: 5px;
+}
+
+#obsah img.fade-out {
+    opacity: 0;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 25px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 3px 0 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

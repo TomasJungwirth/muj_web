@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+}
+
+#menu {
+    position: fixed; /* Fixní pozice */
+    top: 0; /* Umístěno nahoře */
+    left: 0; /* Umístěno vlevo */
+    border: 2px solid black;
+    width: 15%;
+    background-color: #333;
+    height: 100vh; /* Výška odpovídá výšce okna prohlížeče */
+    overflow-y: auto; /* Povolit vertikální posuvník, pokud obsah přesáhne výšku okna */
+}
+
+
+
+#menu nav ul {
+    margin-top: 130%; /* Můžete upravit podle potřeby */
+    padding: 10px; /* Přidání odsazení */
+}
+
+#menu nav ul li {
+    margin-top: 3%;
+    text-align: center;
+}
+
+#menu nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    transition: color 0.1s ease-in-out;
+}
+
+#menu nav ul li a:hover {
+    transition: color 0.18s ease-in-out;
+    color: darkgray;
+}
+
+/* Styl pro aktivní (kliknutý) odkaz */
+#menu nav ul li a.active {
+    color: #32CD32; /* nebo jiná barva podle vašeho výběru */
+}
+
+
+
+
+
+#obsah {
+    background-image: url(trava.jpg);
+    background-repeat: no-repeat;
+    margin-left: 15%; /* Odstranění posunu, aby obsah začínal hned vedle menu */
+    
+    width: 85%; /* Šířka obsahu, aby se vešel vedle menu */
+    text-align: center; /* Zarovnání textu na střed */
+}
+
+#obal {
+    margin-left: 5%;
+    width: 70%;
+    /*background-color: darkgray;
+    opacity: 0.9; */
+}
+
+h1 {
+    text-align: left;
+    margin-top: 3%;
+}
+
+#obal h3 {
+    text-align: left;
+}
+
+p {
+    text-align: justify;
+}
+
+.sluzba {
+    margin-top: 4%;
+    margin-right: 10%;
+   /* background-color: dimgrey;    */
+}
+
+.odkazSluzby {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.odkazPopisu {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+  }
